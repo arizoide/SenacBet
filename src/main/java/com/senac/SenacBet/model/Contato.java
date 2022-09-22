@@ -1,6 +1,9 @@
 package com.senac.SenacBet.model;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class Contato {
@@ -13,6 +16,7 @@ public class Contato {
     private String nome;
 
     @Column
+    @NotEmpty(message = "Este campo nao pode ser vazio")
     private String email;
 
     @Column
